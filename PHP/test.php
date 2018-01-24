@@ -1,11 +1,5 @@
-<?php 
-$B = explode(",", "a,b,c,d,e,f,g,h,i,j");
-// foreach ($B as value){
-//     echo "$value", "\n";
-// }
-
-
-// for ($i = 0; $i < count($B); ++$i){
-//     echo "$B[$i]", "\n";
-// }
-?>
+<input type="button" value="Cl Me!"><br>
+<input type="submit" name="accept" value="Accept"> 
+<input type="submit" name="reject" value="Reject"><br>
+<input type="reset"> <br>
+<input type="reset" value="Clear All"><br>

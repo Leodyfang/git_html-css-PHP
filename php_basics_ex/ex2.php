@@ -21,4 +21,19 @@ $list = [
   </ul>
 
 */
+
+header("Content-type: text/plain");
+for ($i = 0; $i < count($list); ++$i){
+  foreach ($list[$i] as $key => $value){
+    if($key !== "gender"){
+      echo "$key: $value";
+    }else{
+      if($value == "F")
+        echo "(Female)";
+      if($value == "M")
+        echo "(Male)";
+    }
+    echo "\n";
+  }
+}
 ?>

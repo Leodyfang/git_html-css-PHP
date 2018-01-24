@@ -5,6 +5,7 @@ function createRec($name, $age, $gender) {
   ];
 }
 
+
 // Test data
 $list = [
   createRec('John', 20, 'M'), createRec('Jane', 18, 'F'),
@@ -35,4 +36,40 @@ $list = [
   </ul>
 
 */
+$counts = $_GET['counts'];
+if (isset($counts) && strlen($counts) > 0) {
+  $sum = (int) $counts;
+  $n = count($list);
+  if ($counts > 1 && $counts < $n){
+    for ($i = 0; $i < $sum; ++$i){
+      foreach ($list[$i] as $key => $value){
+        if($key !== "gender"){
+          echo "$key: $value";
+        }else{
+          if($value == "F")
+            echo "(Female)";
+          if($value == "M")
+            echo "(Male)";
+        }
+        echo "\n";
+      }
+    }
+  }
+  else {
+    for ($i = 0; $i < 5; ++$i){
+      foreach ($list[$i] as $key => $value){
+        if($key !== "gender"){
+          echo "$key: $value";
+        }else{
+          if($value == "F")
+            echo "(Female)";
+          if($value == "M")
+            echo "(Male)";
+        }
+        echo "\n";
+      }
+    }
+  }
+}
+
 ?>
